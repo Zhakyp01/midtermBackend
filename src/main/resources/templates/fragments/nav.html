@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/spur.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="/js/chart-js-config.js"></script>
+    <title>IAU</title>
+</head>
+
+<body>
+	<div class="dash-nav dash-nav-dark" th:fragment="nav">
+        <header>
+            <a href="#" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </a>
+<!--            <i class="fas fa-bolt"></i>-->
+            <a href="/" class="spur-logo"><img src="http://alatoo.edu.kg/image?img=image_logo_4x.png_565734559276200316.png"> <span style="padding-left: 20px">IAU</span></a>
+        </header>
+        <nav class="dash-nav-list">
+            <a href="/" class="dash-nav-item">
+                <i class="fas fa-home"></i> Home </a>
+            <div class="dash-nav-dropdown ">
+                <a href="#" class="dash-nav-item dash-nav-dropdown-toggle">
+                    <i class="fas fa-cube"></i> Dashboards </a>
+                <div class="dash-nav-dropdown-menu">
+                    <a href="/class/dashboard" class="dash-nav-dropdown-item">Class</a>
+                    <a href="/grade/dashboard" class="dash-nav-dropdown-item">Grade</a>
+                    <a href="/level/dashboard" class="dash-nav-dropdown-item">Level</a>
+                    <a href="/quarter/dashboard" class="dash-nav-dropdown-item">Quarter</a>
+                    <a href="/registration/dashboard" class="dash-nav-dropdown-item">Registration</a>
+                    <a href="/report_card/dashboard" class="dash-nav-dropdown-item">Report card</a>
+                    <a href="/report_card_detail/dashboard" class="dash-nav-dropdown-item">Report card detail</a>
+                    <a href="/school/dashboard" class="dash-nav-dropdown-item">School</a>
+                    <a href="/school_year/dashboard" class="dash-nav-dropdown-item">School year</a>
+                    <a href="/student/dashboard" class="dash-nav-dropdown-item">Student</a>
+                    <a href="/subject/dashboard" class="dash-nav-dropdown-item">Subject</a>
+                    <a href="/teacher/dashboard" class="dash-nav-dropdown-item">Teacher</a>
+                    <a href="/teaching/dashboard" class="dash-nav-dropdown-item">Teaching</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

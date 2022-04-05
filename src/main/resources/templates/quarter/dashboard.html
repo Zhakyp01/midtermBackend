@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/spur.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="/js/chart-js-config.js"></script>
+    <title>Wenger Systems</title>
+</head>
+
+<body>
+    <div class="dash">
+        <div th:replace="fragments/nav :: nav"></div>
+        <div class="dash-app">
+            <header class="dash-toolbar">
+                <a href="#!" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <h3 style="margin-left: 50px">Quarter dashboard</h3>
+            </header>
+            <main class="dash-content">
+                <div class="container-fluid">
+                	<div class="card spur-card">
+                        <div class="card-header">
+                            <div class="spur-card-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <div class="spur-card-title"> All quarters </div>
+                        </div>
+                        <div class="card-body ">
+                            <table class="table table-hover table-in-card">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+							            <th scope="col">Number</th>
+							            <th scope="col">Start date</th>
+							            <th scope="col">End date</th>
+							            <th scope="col">School year</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:if="${quarters.empty}">
+							            <td colspan="2">No Quarters Available</td>
+							        </tr>
+							        <tr th:each="quarter : ${quarters}">
+							            <td><span th:text="${quarter.id}">id</span></td>
+							            <td><span th:text="${quarter.number}">number</span></td>
+							            <td><span th:text="${quarter.startDate}">start_date</span></td>
+							            <td><span th:text="${quarter.endDate}">end_date</span></td>
+							            <td><span th:text="${quarter.schoolYear.id}">school_year_id</span></td>
+							            <td><a th:href="@{{id}/edit(id=${quarter.id})}"><button type="button" class="btn btn-primary btn-sm mb-1">Edit</button></a></td>
+							            <td>
+							            	<form action="#" th:object="${quarter}" th:action="@{/quarter/delete}" th:method="delete">
+							            		<input type="hidden" id="quarter" name="quarter" th:value="${quarter.id}">
+							            		<button type="submit" class="btn btn-danger btn-sm mb-1">Delete</button>
+							            	</form>
+							            </td>
+							        </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card spur-card">
+	                    <div class="card-header">
+	                        <div class="spur-card-icon">
+	                            <i class="fas fa-plus-square"></i>
+	                        </div>
+	                        <div class="spur-card-title"> Add new quarter </div>
+	                    </div>
+	                    <div class="card-body ">
+	                        <form action="#" th:object="${quarter}" th:action="@{/quarter/create}" method="post">
+	                        	<div class="form-group row">
+                                    <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
+                                    <div class="col-sm-10">
+                                    	<input type="number" class="form-control" th:field="*{number}" placeholder="Type a number" required>
+                                    </div>
+                                </div>
+	                            <div class="form-group row">
+	                                <label for="inputStartdate" class="col-sm-2 col-form-label">Start date</label>
+	                                <div class="col-sm-10">
+                                    	<input type="date" class="form-control" th:field="*{startDate}" required>
+                                    </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="inputEnddate" class="col-sm-2 col-form-label">End date</label>
+	                                <div class="col-sm-10">
+                                    	<input type="date" class="form-control" th:field="*{endDate}" required>
+                                    </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="inputSchoolYear" class="col-sm-2 col-form-label">School year</label>
+	                                <div class="col-sm-10">
+										<input type="number" class="form-control" th:field="*{schoolYear.id}" placeholder="Type a year" required>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <div class="col-sm-10">
+	                                    <button type="submit" class="btn btn-primary">Submit</button>
+	                           			<button type="reset" class="btn btn-primary">Reset</button>
+	                                </div>
+	                            </div>
+	                        </form>
+	                    </div>
+	                </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/spur.js"></script>
+</body>
+
+</html>
