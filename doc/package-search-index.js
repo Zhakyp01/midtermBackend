@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.alex.sms"},{"l":"com.alex.sms.controller"},{"l":"com.alex.sms.exception"},{"l":"com.alex.sms.model"},{"l":"com.alex.sms.repository"},{"l":"com.alex.sms.security"},{"l":"com.alex.sms.views"}]
