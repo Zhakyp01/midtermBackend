@@ -22,8 +22,8 @@ public class SecurityConfig {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
             .inMemoryAuthentication()
-                .withUser("wenger")
-                .password("{noop}friedrich")
+                .withUser("alatoo")
+                .password("{noop}alatoo1996")
                 .roles("ADMIN");
     }
 }

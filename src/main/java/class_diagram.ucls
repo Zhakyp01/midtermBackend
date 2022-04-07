@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.alex.sms.SchoolManagementSystemApplication" project="school-management-system" 
+  <class id="1" language="java" name="com.alex.sms.SchoolManagementSystemApplication" project="school-management-system"
     file="/school-management-system/src/main/java/com/alex/sms/SchoolManagementSystemApplication.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="97" width="245" x="188" y="37"/>    
