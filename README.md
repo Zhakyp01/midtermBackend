@@ -3,7 +3,7 @@
 ### School Management System
 This is a simple school management system developed for educational purpose. 
 Application written in Java using Spring Framework and PostgreSQL.
-In the Login page only admin can log in and edit students and all staff. And in home page you can able to see all information about number of teachers, students, subjects, classes per year and last registration students.
+In the Login page only admin can log in and edit students and all staff. Users may also check all the information on the number of teachers, students, subjects, classes per year, and the most recent registration of students on the home page.
 - username `alatoo`
 - password `alatoo1996`
 
