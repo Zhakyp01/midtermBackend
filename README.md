@@ -32,3 +32,7 @@ On the Login page only admin can log in and edit students and all staff. Users m
 ![Screenshot 2022-04-07 154854](https://user-images.githubusercontent.com/73534500/162703499-898a477f-1e78-4cbd-945a-f345c4497378.png)
 
 ![Screenshot 2022-04-07 155050](https://user-images.githubusercontent.com/73534500/162638894-5c5d6dc7-7c7c-408c-95a2-871e9d62d67d.png)
+
+## Database Diagram 
+![Screenshot 2022-04-11 235351](https://user-images.githubusercontent.com/73534500/162800216-b4039a53-767a-41ff-8fba-dff762f738a6.png)
+
