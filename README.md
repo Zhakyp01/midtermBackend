@@ -2,7 +2,7 @@
 
 ### School Management System
 This is a simple school management system developed for educational purpose. 
-Application written in Java using Spring Framework.
+Application written in Java using Spring Framework, PostgreSQL.
 
 
 # Dependencies
